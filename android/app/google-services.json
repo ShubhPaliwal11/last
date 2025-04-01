@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769538353402",
+    "project_id": "solutionc-b2fa7",
+    "storage_bucket": "solutionc-b2fa7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769538353402:android:ee38a465e7a1b9b2968143",
+        "android_client_info": {
+          "package_name": "com.solutionchallenge.ai_assistent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDILfLn6WBNmARGN01jbsc_BT1v0ImGaYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
