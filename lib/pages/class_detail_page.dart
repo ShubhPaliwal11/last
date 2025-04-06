@@ -583,10 +583,10 @@ class _ClassDetailPageState extends State<ClassDetailPage> {
         backgroundColor: widget.classModel.color,
         elevation: 0,
         title: Text(widget.classModel.name),
-        foregroundColor: Colors.white,
+        foregroundColor: Colors.black,
         actions: [
           IconButton(
-            icon: Icon(Icons.info_outline),
+            icon: Icon(Icons.info_outline, color: Colors.black54,),
             onPressed: () {
               showDialog(
                 context: context,
@@ -628,7 +628,7 @@ class _ClassDetailPageState extends State<ClassDetailPage> {
                 Text(
                   widget.classModel.subject,
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.black.withOpacity(0.9),
                     fontSize: 18,
                   ),
                 ),
@@ -636,7 +636,7 @@ class _ClassDetailPageState extends State<ClassDetailPage> {
                 Text(
                   'Assignments',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),

@@ -34,9 +34,11 @@ class _LoginPageState extends State<LoginPage> {
       if (response.user != null) {
         // Get user role
         final role = await AuthService.getUserRole();
-        
+
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Login Successful! Welcome ${response.user?.email}')),
+          SnackBar(
+            content: Text('Login Successful! Welcome ${response.user?.email}'),
+          ),
         );
 
         // Navigate based on role
@@ -56,9 +58,9 @@ class _LoginPageState extends State<LoginPage> {
       print("Login failed: $e");
       String errorMessage = "An error occurred during login.";
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMessage)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(errorMessage)));
     }
   }
 
@@ -106,10 +108,13 @@ class _LoginPageState extends State<LoginPage> {
                             width: screenSize.width * 0.35,
                             height: screenSize.height * 0.6,
                             fit: BoxFit.contain,
-                            placeholderBuilder: (context) => CircularProgressIndicator(),
+                            placeholderBuilder:
+                                (context) => CircularProgressIndicator(),
                           ),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.horizontal(left: Radius.circular(20)),
+                            borderRadius: BorderRadius.horizontal(
+                              left: Radius.circular(20),
+                            ),
                           ),
                         ),
                       ),
@@ -134,12 +139,22 @@ class _LoginPageState extends State<LoginPage> {
                             SizedBox(height: 20),
 
                             // Email Field
-                            _buildTextField(_emailController, 'Email', Icons.email, false),
+                            _buildTextField(
+                              _emailController,
+                              'Email',
+                              Icons.email,
+                              false,
+                            ),
 
                             SizedBox(height: 15),
 
                             // Password Field
-                            _buildTextField(_passwordController, 'Password', Icons.lock, true),
+                            _buildTextField(
+                              _passwordController,
+                              'Password',
+                              Icons.lock,
+                              true,
+                            ),
 
                             SizedBox(height: 25),
 
@@ -169,12 +184,17 @@ class _LoginPageState extends State<LoginPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("New here? ", style: TextStyle(fontSize: 14)),
+                                Text(
+                                  "New here? ",
+                                  style: TextStyle(fontSize: 14),
+                                ),
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (context) => SignupPage()),
+                                      MaterialPageRoute(
+                                        builder: (context) => SignupPage(),
+                                      ),
                                     );
                                   },
                                   child: Text(
@@ -203,16 +223,18 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildTextField(
-      TextEditingController controller, String hintText, IconData icon, bool isObscure) {
+    TextEditingController controller,
+    String hintText,
+    IconData icon,
+    bool isObscure,
+  ) {
     return TextField(
       controller: controller,
       obscureText: isObscure,
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: Icon(icon, color: Colors.blue),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
       ),
     );
   }
