@@ -22,7 +22,8 @@ This project is built with Flutter. To get started:
 3. Set up Supabase configuration in `lib/utils/supabase_config.dart`
 4. Run the app with `flutter run`
 
-## Resources
+##Video
 
-- [Flutter Documentation](https://docs.flutter.dev/)
-- [Supabase Documentation](https://supabase.io/docs)
+
+https://github.com/user-attachments/assets/af5c3f17-8283-459a-99d0-5841494e3e3f
+
